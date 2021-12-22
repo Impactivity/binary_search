@@ -39,6 +39,10 @@ _max = max(map(max, graph))
 max_area = _min
 
 #최소부터 최대까지 모두 조사
+
+start = _min
+end = _max
+
 for k in range(_min, _max+1):
     visited = [[0] * (N) for _ in range(N)]
     count = 0
