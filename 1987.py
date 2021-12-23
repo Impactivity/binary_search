@@ -1,9 +1,7 @@
 import sys
 
-
 dx = [0,0,-1,1]
 dy = [1,-1,0,0]
-
 
 def bfs(x,y):
     global answer
@@ -20,10 +18,8 @@ def bfs(x,y):
                 continue
 
             if graph[nx][ny] not in ans:
-
                 q.add((nx,ny,ans + graph[nx][ny] ))
                 answer = max(answer, len(ans) + 1 )
-
     return
 
 read = sys.stdin.readline
@@ -31,7 +27,6 @@ read = sys.stdin.readline
 R,C = map(int, read().split())
 graph = [list(read().strip()) for _ in range(R)]
 
-print(graph)
 answer = 1
 bfs(0,0)
 print(answer)
