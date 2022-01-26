@@ -23,13 +23,13 @@ def binary_search(tmp, num):
 
 
 for i in range(1,n+1):
-    if tmp[-1] < arr[i]: #현재 수가 부분수열 마지막 수 보다 크다면
+    if tmp[-1] < arr[i]: #현재 수가 부분수열 마지막 수보다 크다면
         tmp.append(arr[i]) # 부분수열에 append
         dp[i] = len(tmp) - 1 # 부분수열에 초기값 뺀 나머지 길이를 저장
         maxVal = dp[i] # 부분수열 최대길이를 maxVal에 저장
     else:
-        dp[i] = binary_search(tmp,arr[i]) #tmp에서 현재 수 를 찾아
-        tmp[dp[i]] = arr[i] #해당 수로 갱신..
+        dp[i] = binary_search(tmp,arr[i]) #tmp에서 현재 수를 넣을 위치를 찾아
+        tmp[dp[i]] = arr[i] #해당 수로 갱신
 
 print(maxVal)
 
