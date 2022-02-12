@@ -21,7 +21,7 @@ def binary_search(start, end, target):
         # n*n 행렬에서 즉, min( 해당수 // 행 , N) 이 될 것이다.
         #
         for i in range(1, N+1): #1행부터 n행까지
-            cnt += min( mid // i , N)
+            cnt += min( mid // i , N) # n개 열의 수와, mid수보다 작은 i번째 행의 숫자의 갯수 중 작은 값
 
         if cnt < target:
             start = mid + 1
