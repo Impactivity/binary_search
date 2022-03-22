@@ -8,7 +8,7 @@ class Node:
         self.left = None
         self.right = None
 
-    # 기본적으로 오름차순인데
+    # sort()함수는 기본적으로 오름차순인데
     def __lt__(self ,other): # self < other 재정의
         if self.y == other.y:
             return self.x < other.x
