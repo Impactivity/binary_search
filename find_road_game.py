@@ -27,7 +27,6 @@ def addNode(parent ,child):
             addNode(parent.left ,child)
 
 def preorder(arr , node):
-
     if node == None:
         return
 
